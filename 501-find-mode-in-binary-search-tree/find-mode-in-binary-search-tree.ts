@@ -30,8 +30,6 @@ function findMode(root: TreeNode | null): number[] {
         }
     }
 
-    console.log(dict);
-
     let max = 0;
     for (const [key, value] of Object.entries(dict)) {
         if (Number(value) > max) {
