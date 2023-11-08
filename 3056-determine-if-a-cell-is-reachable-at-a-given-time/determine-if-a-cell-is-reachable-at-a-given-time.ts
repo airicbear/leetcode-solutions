@@ -4,9 +4,5 @@ function isReachableAtTime(sx: number, sy: number, fx: number, fy: number, t: nu
     if (x + y == 0 && t == 1) {
         return false;
     }
-    if (x > y) {
-        return Math.abs(x + (fx - (sx + x))) <= t;
-    } else {
-        return Math.abs(y + (fy - (sy + y))) <= t;
-    }
+    return t >= Math.max(x, y);
 };
