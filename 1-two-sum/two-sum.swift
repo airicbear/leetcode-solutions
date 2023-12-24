@@ -1,12 +1,13 @@
 class Solution {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var sum: Int = 0
+        var dict: [Int: Int] = [:]
 
-        for (i, num1) in nums.enumerated() {
-            for (j, num2) in nums.enumerated().dropFirst(i) {
-                if i != j && num1 + num2 == target {
-                    return [i, j]
-                }
+        for (i, num) in nums.enumerated() {
+            if let j = dict[target - num] {
+                return [j, i]
+            } else {
+                dict[num] = i
             }
         }
 
