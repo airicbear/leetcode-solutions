@@ -1,6 +1,5 @@
 class Solution {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        var sum: Int = 0
         var dict: [Int: Int] = [:]
 
         for (i, num) in nums.enumerated() {
